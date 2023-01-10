@@ -6,19 +6,23 @@
   <title>Tic Tac Toe</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
+  <!-- General Styling -->
   <link rel="stylesheet" href="styles/index.css">
+  <!-- Overlay Styling -->
+  <link rel="stylesheet" href="styles/overlay.css">
   <!-- Google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="	stylesheet">
 </head>
 <body>
+	<div id="backdrop"></div>
 	<header id="main-header">
 		<h1>Play Tic Tac Toe</h1>
 		<p>Built with HTML, CSS and Javascript  and of course Neovim(Now i play around my init file)</p>
 	</header>
 	<main>
-		<aside>
+		<aside class="modal">
 			<h2>Choose your name</h2>
 			<form>
 				<div>
