@@ -18,6 +18,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="	stylesheet">
+<!-- Scripts -->
+<script src="scripts/config.js" defer></script>
+<script src="scripts/game.js" defer></script>
+<script src="scripts/app.js" defer></script>
+
 </head>
 <body>
 	<div id="backdrop"></div>
@@ -46,7 +51,7 @@
 						<h2>Player 1</h2>
 						<h3>Player Name</h3>
 						<p class="player-symbol">X</p>
-						<button class="btn btn-alt">Edit</button>
+						<button class="btn btn-alt" id="edit-player1">Edit</button>
 					</article>
 				</li>
 				<li>
@@ -54,7 +59,7 @@
 						<h2>Player 2</h2>
 						<h3>Player Name</h3>
 						<p class="player-symbol">O</p>
-						<button class="btn btn-alt">Edit</button>
+						<button class="btn btn-alt" id="edit-player2">Edit</button>
 					</article>
 				</li>
 			</ol>
