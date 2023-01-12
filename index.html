@@ -12,7 +12,9 @@
   <link rel="stylesheet" href="styles/overlay.css">
   <!-- Configuration styles -->
   <link rel="stylesheet" href="styles/configuration.css">
-  <!-- Google fonts -->
+  <!-- Game board configuration -->
+  <link rel="stylesheet" href="styles/game.css">
+			 <!-- Google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="	stylesheet">
@@ -58,13 +60,15 @@
 			</ol>
 			<button class="btn">Start Game</button>
 		</section>
-			<article>
-				<h3>You won, <span id="winner-name">PLAYER NAME</span>!</h3>
+
+		<section id="active-game">
+			<article id="game-over">
+				<h2>You won, <span id="winner-name">PLAYER NAME</span>!</h2>
 				<p>Click "Start New Game" to start a new game!</p>
 			</article>
 
 			<p>It's your turn <span id="active-player-name">PLAYER NAME</span>!</p>
-			<ol>
+			<ol id="game-board">
 				<li></li>
 				<li></li>
 				<li></li>
@@ -79,8 +83,6 @@
 	
 			</ol>
 
-		<section id="active-game">
-			
 		</section>
 	</main>
 </body>
