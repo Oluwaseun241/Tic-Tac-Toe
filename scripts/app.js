@@ -1,4 +1,5 @@
 let editedPlayer = 0;
+let activePlayer = 0;
 
 const players = [
     {
@@ -24,6 +25,8 @@ const editPlayer1Element = document.getElementById('edit-player1');
 const editPlayer2Element = document.getElementById('edit-player2');
 const cancelConfigElement = document.getElementById('cancel-config');
 const startNewGameElement = document.getElementById('start-game-btn');
+const gameFieldElements = document.querySelectorAll('#game-board li');
+// const gameBoardElement = document.getElementById('game-board');
 
 // Click section
 editPlayer1Element.addEventListener('click', openPlayerConfig);
@@ -35,3 +38,10 @@ backdropElement.addEventListener('click', closePlayerConfig);
 formElement.addEventListener('submit', setPlayerConfig);
 
 startNewGameElement.addEventListener('click', startNewGame);
+
+for (const gameFieldElement of gameFieldElements) {
+    gameFieldElement.addEventListener('click', selectGameField);
+}
+
+// Logic messed up
+// gameBoardElement.addEventListener('click', selectGameField)
