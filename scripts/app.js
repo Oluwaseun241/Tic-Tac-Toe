@@ -27,14 +27,15 @@ const errorsElement = document.getElementById('config-errors');
 const startGameErrorElement = document.getElementById('start-game-error');
 const gameAreaElement = document.getElementById('active-game');
 const activePlayerNameElement = document.getElementById('active-player-name');
+const gameOverElement = document.getElementById('game-over');
 
 // Button section
 const editPlayer1Element = document.getElementById('edit-player1');
 const editPlayer2Element = document.getElementById('edit-player2');
 const cancelConfigElement = document.getElementById('cancel-config');
 const startNewGameElement = document.getElementById('start-game-btn');
-const gameFieldElements = document.querySelectorAll('#game-board li');
-// const gameBoardElement = document.getElementById('game-board');
+// const gameFieldElements = document.querySelectorAll('#game-board li');
+const gameBoardElement = document.getElementById('game-board');
 
 // Click section (event listner)
 editPlayer1Element.addEventListener('click', openPlayerConfig);
@@ -47,9 +48,10 @@ formElement.addEventListener('submit', setPlayerConfig);
 
 startNewGameElement.addEventListener('click', startNewGame);
 
-for (const gameFieldElement of gameFieldElements) {
-    gameFieldElement.addEventListener('click', selectGameField);
-}
 
 // Logic messed up
-// gameBoardElement.addEventListener('click', selectGameField)
+// for (const gameFieldElement of gameFieldElements) {
+//     gameFieldElement.addEventListener('click', selectGameField);
+// }
+
+gameBoardElement.addEventListener('click', selectGameField)

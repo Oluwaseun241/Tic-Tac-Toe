@@ -1,8 +1,28 @@
+function resetGame() {
+    activePlayer = 0;
+    currentRound = 1;
+    gameOverElement.firstElementChild.innerHTML = 'You won <span id="winner-name">PLAYER NAME</span>!';
+    gameOverElement.style.display = 'none';
+
+    let gameBoardIndex = 0;
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            gameData[i][j] = 0;
+            const gameBoardItemElement = gameBoardElement.children[gameBoardIndex];
+            gameBoardItemElement.textContent = '';
+            gameBoardItemElement.classList.remove('disabled');
+            gameBoardIndex++;
+        }
+    }
+}
+
 function startNewGame() {
     if (players[0].name === '' || players[1].name === '') {
         startGameErrorElement.textContent = 'Please set custom player names for both players';
         return;
     }
+
+    resetGame();
 
     activePlayerNameElement.textContent = players[activePlayer].name;
     gameAreaElement.style.display = 'block';
@@ -19,6 +39,10 @@ function switchPlayer() {
 }
 
 function selectGameField(event) {
+    if (event.target.tagName !== 'LI') {
+        return;
+    }
+
     const selectedField = event.target;
     const selectedColumn = selectedField.dataset.col - 1;
     const selectedRow = selectedField.dataset.row - 1;
@@ -33,9 +57,12 @@ function selectGameField(event) {
     selectedField.classList.add('disabled');
 
     gameData[selectedRow][selectedColumn] = activePlayer + 1;
-    
+
     const winnerId = checkForGameOver();
-    console.log(winnerId);
+
+    if (winnerId !== 0) {
+        endGame(winnerId);
+    }
 
     currentRound++;
     switchPlayer();
@@ -86,4 +113,15 @@ function checkForGameOver() {
     }
     // check for game not over
     return 0;
+}
+
+function endGame(winnerId) {
+    gameOverElement.style.display = 'block';
+
+    if (winnerId > 0) {
+        const winnerName = players[winnerId - 1].name;
+        gameOverElement.firstElementChild.firstElementChild.textContent = winnerName
+    } else {
+        gameOverElement.firstElementChild.textContent = 'It\'s a Draw!'
+    }
 }
