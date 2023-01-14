@@ -21,6 +21,11 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
       rel="	stylesheet"
     />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png" />
+    <link rel="manifest" href="static/site.webmanifest" />
     <!-- Scripts -->
     <script src="scripts/config.js" defer></script>
     <script src="scripts/game.js" defer></script>
@@ -31,8 +36,8 @@
     <header id="main-header">
       <h1>Play Tic Tac Toe</h1>
       <p>
-        Built with HTML, CSS and Javascript and of course <strong>Neovim(Now i play
-          around my init file)</strong>
+        Built with HTML, CSS and Javascript and of course
+        <strong>Neovim(Now i play around my init file)</strong>
       </p>
     </header>
     <main>
@@ -59,7 +64,9 @@
               <h2>Player 1</h2>
               <h3>Player Name</h3>
               <p class="player-symbol">X</p>
-              <button class="btn btn-alt" id="edit-player1" data-playerid="1">Edit</button>
+              <button class="btn btn-alt" id="edit-player1" data-playerid="1">
+                Edit
+              </button>
             </article>
           </li>
           <li>
@@ -67,7 +74,9 @@
               <h2>Player 2</h2>
               <h3>Player Name</h3>
               <p class="player-symbol">O</p>
-              <button class="btn btn-alt" id="edit-player2" data-playerid="2">Edit</button>
+              <button class="btn btn-alt" id="edit-player2" data-playerid="2">
+                Edit
+              </button>
             </article>
           </li>
         </ol>
@@ -83,17 +92,17 @@
 
         <p>It's your turn <span id="active-player-name">PLAYER NAME</span>!</p>
         <ol id="game-board">
-          <li></li>
-          <li></li>
-          <li></li>
+          <li data-col="1" data-row="1"></li>
+          <li data-col="2" data-row="1"></li>
+          <li data-col="3" data-row="1"></li>
 
-          <li></li>
-          <li></li>
-          <li></li>
+          <li data-col="1" data-row="2"></li>
+          <li data-col="2" data-row="2"></li>
+          <li data-col="3" data-row="2"></li>
 
-          <li></li>
-          <li></li>
-          <li></li>
+          <li data-col="1" data-row="3"></li>
+          <li data-col="2" data-row="3"></li>
+          <li data-col="3" data-row="3"></li>
         </ol>
       </section>
     </main>
