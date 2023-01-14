@@ -7,7 +7,7 @@ This is a simple Tic Tac Toe game built using HTML, CSS, and JavaScript. The gam
 * Create player names and click 'Start Game' to begin the game.
 * Players take turns clicking on the squares to place their marks
 * The game will automatically check for a winner after each move, and will display a message to indicate the winner or if the game is a tie
-* Click the "Reset" button to clear the board and start a new game
+* Click the "Start New Game" button to clear the board and start a new game
 
 ## Enjoy!
 Please let me know if you need any further help.
