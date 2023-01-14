@@ -14,6 +14,12 @@ body {
 	text-align: center;
 }
 
+#bold {
+	color: rgb(41, 39, 39);
+	font-size: 14px;
+	font-style: italic;
+}
+
 .btn {
 	font: inherit;
 	padding: 0.5rem 1.5rem;
